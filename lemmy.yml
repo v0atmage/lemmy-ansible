@@ -71,7 +71,7 @@
           dest: '/etc/nginx/sites-available/{{domain}}.conf'
           mode: '0644'
       vars:
-        lemmy_docker_image: "dessalines/lemmy:{{ lemmy_version | default( lookup('file', 'VERSION') )}}"
+        lemmy_docker_image: "v0atmage/lemmy:{{ lemmy_version | default( lookup('file', 'VERSION') )}}"
         lemmy_docker_ui_image: "dessalines/lemmy-ui:{{ lemmy_ui_version | default(lemmy_version | default(lookup('file', 'VERSION')))}}"
 
     - block:
